@@ -23,7 +23,7 @@ while True:
 
     except ValueError:
         is_configured = False
-        print(colored("You tried to break my program. Nice try, but no. ( ＾◡＾)っ✂╰⋃╯", "light_red"))
+        print(colored("You tried to break my program. Nice try, but no.", "light_red"))
         continue
 
     except KeyboardInterrupt or EOFError:
