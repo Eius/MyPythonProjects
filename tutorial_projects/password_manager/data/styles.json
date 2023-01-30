@@ -1,0 +1,10 @@
+{
+  "credentials_messagebox": {
+    "font_bold": ["Arial", 10, "bold"],
+    "font_normal": ["Arial", 10, "normal"]
+  },
+  "generate_config_window": {
+    "font_bold": ["Arial", 10, "bold"],
+    "font_normal": ["Arial", 10, "normal"]
+  }
+}
