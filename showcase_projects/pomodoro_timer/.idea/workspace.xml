@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1492f7b2-4baa-4523-8697-b480f49611ce" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../other_projects/docker_test/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../other_projects/docker_test/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../other_projects/docker_test/.idea/docker_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../other_projects/docker_test/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../other_projects/docker_test/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../other_projects/docker_test/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../other_projects/docker_test/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../other_projects/docker_test/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../other_projects/docker_test/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../other_projects/docker_test/coffee_maker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../other_projects/docker_test/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../other_projects/docker_test/menu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../other_projects/docker_test/money_machine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pong/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pong/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pong/.idea/pong.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../pong/.idea/pong.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pong/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pong/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pong/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/../pong/globals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tutorial_projects/turtle_random_walk/data.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KEx4jKQD590G5qiIRN9YfPAmtv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/zacik/Documents/PythonProjects/showcase_projects/million_dollar_painting",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\zacik\PycharmProjects\PomodoroTimer" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zacik\PycharmProjects\PomodoroTimer\data" />
+      <recent name="C:\Users\zacik\PycharmProjects\PomodoroTimer" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="PomodoroTimer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1492f7b2-4baa-4523-8697-b480f49611ce" name="Changes" comment="" />
+      <created>1673553354022</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673553354022</updated>
+      <workItem from="1673553356550" duration="20541000" />
+      <workItem from="1673624292040" duration="966000" />
+      <workItem from="1674407933569" duration="214000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PomodoroTimer$UI.coverage" NAME="UI Coverage Results" MODIFIED="1673564120557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pomodoro_timer$main.coverage" NAME="main Coverage Results" MODIFIED="1674408065123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PomodoroTimer$main.coverage" NAME="main Coverage Results" MODIFIED="1673624357297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
