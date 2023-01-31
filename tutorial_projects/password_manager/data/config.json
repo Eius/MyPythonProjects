@@ -1,8 +1,8 @@
 {
     "password_generator": {
-        "include_lowercase": "False",
+        "include_lowercase": "True",
         "include_uppercase": "True",
         "include_numbers": "True",
-        "include_symbols": "True"
+        "include_symbols": "False"
     }
 }

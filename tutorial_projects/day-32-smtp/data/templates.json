@@ -1,0 +1,11 @@
+{
+  "template_1": {
+    "text": "[PREFIX] [NAME],\n\nDnes máš narodeniny! Všetko najlepšie!\n\nS láskou,\n\nMarek"
+  },
+  "template_2": {
+    "text": "[PREFIX] [NAME],\n\nDnes máš narodeniny!\n\nNech sa ti splnia všetky sny a nech ti život prináša len šťastie a radosť.\n\nS láskou,\n\nMarek"
+  },
+  "template_3": {
+    "text": "[PREFIX] [NAME],\n\nŽelám ti všetko dobré na tvoj špeciálny deň!\n\nDúfam, že ho budeš mať naplnený láskou, smiechom a dobrým zdravím.\n\nS láskou,\n\nMarek"
+  }
+}
