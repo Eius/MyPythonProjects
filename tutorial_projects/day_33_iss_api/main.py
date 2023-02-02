@@ -50,8 +50,6 @@ def is_night():
     time_now = int(datetime.now().hour)
     global IS_NIGHT
     if time_now < sunrise or time_now > sunset:
-        print(sunset)
-        print(sunrise)
         return True
     else:
         return False
