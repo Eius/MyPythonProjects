@@ -3,17 +3,17 @@ import math
 from geopy.distance import great_circle
 
 
-def update_time_data(global_data):
+def fetch_time_data(global_data):
     """Updates night state and TWILIGHT start and end"""
     # TWILIGHT BEGIN/END
-    params = {"lat": global_data.current_location[0], "lng": global_data.current_location[1], "formatted": 0}
+    params = {"lat": global_data.current_location[0], "lng": global_data.current_location[1], "formatted": 1}
     response = requests.get("https://api.sunrise-sunset.org/json", params=params)
     response.raise_for_status()
     data = response.json()
     return data
 
 
-def update_iss_location() -> (float, float):
+def fetch_iss_location() -> (float, float):
     """Save the International Space Station's latitude and longitude to globals"""
     response = requests.get("http://api.open-notify.org/iss-now.json")
     response.raise_for_status()
@@ -26,7 +26,7 @@ def update_iss_location() -> (float, float):
 def calculate_distance(global_data) -> float:
     """Calculate the distance between the current location and ISS location"""
     current_location = (global_data.current_location[0], global_data.current_location[1])
-    iss_location = (global_data.iss_location()[0], global_data.iss_location()[1])
+    iss_location = (global_data.iss_location[0], global_data.iss_location[1])
     distance = round(great_circle(current_location, iss_location).km, 2)
     return distance
 
@@ -47,7 +47,7 @@ def calculate_direction(global_data) -> str:
             if interval[0] <= brng < interval[1]:
                 return letter
     lat1, lon1 = math.radians(global_data.current_location[0]), math.radians(global_data.current_location[1])
-    lat2, lon2 = math.radians(global_data.iss_location()[0]), math.radians(global_data.iss_location()[1])
+    lat2, lon2 = math.radians(global_data.iss_location[0]), math.radians(global_data.iss_location[1])
     d_lon = lon2 - lon1
     y = math.sin(d_lon) * math.cos(lat2)
     x = math.cos(lat1) * math.sin(lat2) - math.sin(lat1) * math.cos(lat2) * math.cos(d_lon)

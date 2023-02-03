@@ -1,12 +1,14 @@
 from tkinter import Tk
 from frames.coordinates_frame import CoordinatesFrame
+from threading import Thread
+from global_data import GlobalData
 
 
 class Window(Tk):
-    def __init__(self, global_data):
+    def __init__(self, global_data: GlobalData):
         super().__init__()
         # Save reference to global data class
-        self.global_data = global_data
+        self.global_data: GlobalData = global_data
 
         # Config window
         self.title("ISS Location Tracker")
@@ -22,5 +24,19 @@ class Window(Tk):
         self.mainloop()
 
     def update_loop(self):
-        self.coordinates_frame.update_loop()
-        self.after(100, self.update_loop)
+        print("\n\nStarting update thread")
+        update_thread = self.global_data.async_update_data()
+        self.monitor(update_thread)
+
+    def monitor(self, thread: Thread, total_runtime=0.0):
+        if thread.is_alive():
+            total_runtime += 0.1
+            self.after(100, lambda: self.monitor(thread, total_runtime))
+        else:
+            print("Update thread finished")
+            print(f"Total runtime: {round(total_runtime, 2)}")
+            self.coordinates_frame.update_data()
+            self.update_loop()
+            # self.after(5000, self.update_loop)
+
+
