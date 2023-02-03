@@ -1,5 +1,8 @@
-from geo_functions import *
-import globals
-from app import App
+from window import Window
+from global_data import GlobalData
 
-app = App()
+global_data = GlobalData()
+app = Window(global_data)
+
+while True:
+    pass
