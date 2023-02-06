@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Allow empty directories
+!/*/
+
 # Private API keys and stuff
 config.ini
 api.ini
