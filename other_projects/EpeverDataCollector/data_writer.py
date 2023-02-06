@@ -1,6 +1,6 @@
 import os
 from influxdb_client import InfluxDBClient, Point
-from influxdb_client.client.write_api import SYNCHRONOUS
+from influxdb_client.client.write_api import SYNCHRONOUS, WritePrecision
 from data_fetcher import DataFetcher
 from typing import List
 
@@ -16,11 +16,9 @@ class DataWriter:
         self.write_client = self.client.write_api(write_options=SYNCHRONOUS)
 
     def write_points(self, points: List[Point]) -> bool:
-        for point in points:
-            print(f"Writing: {point.to_line_protocol()}")
-            response = self.write_client.write(bucket=self.bucket, record=point)
-            if response is None:
-                return True
-            else:
-                return False
+        response = self.write_client.write(bucket=self.bucket, record=points)
+        if response is None:
+            return True
+        else:
+            return False
 
