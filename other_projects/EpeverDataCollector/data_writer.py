@@ -5,8 +5,7 @@ from data_fetcher import DataFetcher
 from typing import List
 
 class DataWriter:
-    def __init__(self, data_fetcher: DataFetcher):
-        self.data_fetcher = data_fetcher
+    def __init__(self):
         self.token = os.environ.get("INFLUXDB_TOKEN")
         self.org = "EpeverData"
         self.url = "https://eu-central-1-1.aws.cloud2.influxdata.com"

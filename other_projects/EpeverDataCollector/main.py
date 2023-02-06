@@ -17,7 +17,7 @@ COM_PORT = input("COM port:")
 
 try:
     fetcher = DataFetcher(COM_PORT)
-    writer = DataWriter(fetcher)
+    writer = DataWriter()
 except SerialException:
     print("COM port doesn't exist.")
     print("Terminating program...")
