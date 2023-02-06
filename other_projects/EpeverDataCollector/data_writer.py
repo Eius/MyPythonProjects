@@ -1,61 +1,26 @@
-import influxdb_client
 import os
-import time
 from influxdb_client import InfluxDBClient, Point
 from influxdb_client.client.write_api import SYNCHRONOUS
+from data_fetcher import DataFetcher
+from typing import List
 
 
 class DataWriter:
-    def __init__(self):
+    def __init__(self, data_fetcher: DataFetcher):
+        self.data_fetcher = data_fetcher
         self.token = os.environ.get("INFLUXDB_TOKEN")
         self.org = "EpeverData"
         self.url = "https://eu-central-1-1.aws.cloud2.influxdata.com"
-        self.bucket = "EpeverData"
-        self.write_client = InfluxDBClient(url=self.url, token=self.token, org=self.org)
+        self.bucket = "Epever_Data"
+        self.client = InfluxDBClient(url=self.url, token=self.token, org=self.org)
+        self.write_client = self.client.write_api(write_options=SYNCHRONOUS)
 
-        # Define the write api
-        self.write_api = self.write_client.write_api(write_options=SYNCHRONOUS)
+    def write_points(self, points: List[Point]) -> bool:
+        for point in points:
+            print(f"Writing: {point.to_line_protocol()}")
+            response = self.write_client.write(bucket=self.bucket, record=point)
+            if response is None:
+                return True
+            else:
+                return False
 
-        self.data = {
-            "point1": {
-                "location": "Klamath",
-                "species": "bees",
-                "count": 23,
-            },
-            "point2": {
-                "location": "Portland",
-                "species": "ants",
-                "count": 30,
-            },
-            "point3": {
-                "location": "Klamath",
-                "species": "bees",
-                "count": 28,
-            },
-            "point4": {
-                "location": "Portland",
-                "species": "ants",
-                "count": 32,
-            },
-            "point5": {
-                "location": "Klamath",
-                "species": "bees",
-                "count": 29,
-            },
-            "point6": {
-                "location": "Portland",
-                "species": "ants",
-                "count": 40,
-            },
-        }
-
-        for key in self.data:
-            point = (
-                Point("census")
-                .tag("location", self.data[key]["location"])
-                .field(self.data[key]["species"], self.data[key]["count"])
-            )
-            self.write_api.write(bucket=self.bucket, org=self.org, record=point)
-            time.sleep(1)  # separate points by 1 second
-
-        print("Complete. Return to the InfluxDB UI.")

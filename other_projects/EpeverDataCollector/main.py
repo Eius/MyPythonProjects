@@ -1,16 +1,30 @@
-import reader as reader
-from flightsql import FlightSQLClient
-from influxdb_client import InfluxDBClient
-import os
+from data_writer import DataWriter
+from data_fetcher import DataFetcher
+import time
+import logging
+from utilities import seconds_to_next_minute
 
-token = os.environ.get("INFLUXDB_TOKEN")
-org = "EpeverData"
-url = "https://eu-central-1-1.aws.cloud2.influxdata.com"
-bucket = "EpeverData"
-influx_client = InfluxDBClient(url=url, token=token, org=org)
+# Set up logging
+logging.basicConfig(format='%(asctime)s %(levelname)s:%(message)s',
+                    datefmt='%d-%m-%Y %H:%M:%S',
+                    filename='logs.log',
+                    encoding='utf-8',
+                    level=logging.DEBUG)
 
-query = "from(bucket: \"" + bucket + "\") |> range(start: -48h)"
+COM_NUMBER = input("Číslo Com Port-u:")
 
-result = influx_client.query_api().query(query)
-for record in result[0]:
-    print(record.get_value())
+fetcher = DataFetcher("com" + COM_NUMBER)
+writer = DataWriter(fetcher)
+
+while True:
+    if seconds_to_next_minute() <= 1.2:
+        time.sleep(2)
+        points = fetcher.get_points()
+        was_successful = writer.write_points(points)
+        if not was_successful:
+            logging.warning("Zápis do databázy zlyhal.")
+            raise Exception("Writing to database was not successful")
+        else:
+            logging.info("Meranie bolo úspešne zapísané do dazabázy.")
+
+    time.sleep(seconds_to_next_minute())
