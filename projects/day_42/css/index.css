@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+    font-family: "poppins", sans-serif
+}
+
+img {
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+    border: 1px solid red;
+}
+
+tr {
+    vertical-align: top;
+}
+
+.center-text {
+    text-align: left;
+}
+
+.workTable {
+    border-spacing: 2px;
+}
+
+.workDate {
+    font-size: 12px;
+}
